@@ -6,6 +6,7 @@ def insertion_sort(arr):
   while(len(arr_out) != arrLength):
     lowestNumIndex = arr.index(min(arr))
     arr_out.append(arr[lowestNumIndex])
+    print(f"inserted number {arr[lowestNumIndex]}")
     arr.pop(lowestNumIndex)
   return arr_out
 
