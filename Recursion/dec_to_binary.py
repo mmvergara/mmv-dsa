@@ -1,13 +1,10 @@
-def dec_to_binary(num:int,result:str)->str:
+def dec_to_binary(num:int,result="")->str:
     if num == 0:
         return result
     result = str(num % 2 ) + result
     return dec_to_binary(int(num / 2), result)
 
-
-
-
-def dec_to_binary_nr(num:int,result:str)->str:
+def dec_to_binary_nr(num:int,result="")->str:
     result = ""
     while(num != 0):
       if(num % 2 == 0):
@@ -17,4 +14,4 @@ def dec_to_binary_nr(num:int,result:str)->str:
       num = int(num/2)
     return result
         
-print(dec_to_binary_nr(233,""))
+print(dec_to_binary_nr(233))
