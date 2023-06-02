@@ -2,4 +2,13 @@
 # Data Structures and Algorithms
 
 - Recursion
-- Graphs
+ - fibonacci
+ - merge sort
+
+
+- Sorting
+ - bubble sort
+ - insertion sort
+ - merge sort
+ - quick sort
+ - selection sort
