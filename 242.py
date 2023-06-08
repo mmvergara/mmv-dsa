@@ -11,6 +11,9 @@
 #         return True
 #     return False
       
+# 1. edge case s and t are not the same size then it is !anagram
+# 2. loop through and store characters count in hash
+# 3. use the 2 hashes to make sure every characters in t have the same count as s and vice versa
 
 def isAnagram(self, s: str, t: str) -> bool:
     if len(s) != len(t):
