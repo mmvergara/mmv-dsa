@@ -1,5 +1,2 @@
-import math
-
-print (math.trunc(7/2))
-
-
+new = (0,1)
+print(sum(new))
