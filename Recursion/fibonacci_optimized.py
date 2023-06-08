@@ -7,4 +7,4 @@ def fib(n:int,memo:dict={}):
     res = fib(n-1) + fib(n-2)
     memo[n] = res
     return res
-print(fib(15))
+print(fib(3))
