@@ -18,3 +18,7 @@ https://leetcode.com/list/xi4ci4ig/
  # Reviews
   - 26
   
+# Math 
+ - Combinatronics
+ - Number Theory
+ 
