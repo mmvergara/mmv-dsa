@@ -1,2 +1,1 @@
-new = (0,1)
-print(sum(new))
+print(list(range(10,-1,-1)))
