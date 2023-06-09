@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 arr = [1,2,3,4,5]
 target = 9
 
@@ -24,3 +25,6 @@ def twoSum(arr:list,target:int):
     print("NOT FOUND")
 
 print(twoSum(arr,target))
+=======
+print(list(range(10,-1,-1)))
+>>>>>>> c23f4a06d015f5ddcdae4efdd0544cf6e2343938
