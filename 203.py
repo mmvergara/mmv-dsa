@@ -1,22 +1,20 @@
 from dsa import *
 
 
-def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        while head and head.val == val:
+            head = head.next
 
-    # handle the case where the head has the value
-    while head and head.val == val:
-        head = head.next
+        prev = head
+        curr = head
 
-    prev = head
-    curr = head
+        while curr:
+            if curr.val == val:
+                prev.next = curr.next
+            else:
+                prev = curr
 
-    while curr:
-        if curr.val == val:
-            prev.next = curr.next
-        else:
-            prev = curr
-        curr = current.next
-    return head
-    
+            curr = curr.next
 
-print(ListNode(1))
+        return head

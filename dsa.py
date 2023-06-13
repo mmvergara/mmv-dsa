@@ -1,4 +1,5 @@
-from typing import Optional
+from typing import Optional, List
+
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -7,6 +8,7 @@ class ListNode:
 
     def __repr__(self) -> str:
         return f"{{val:{self.val} , next:{self.next}}}"
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

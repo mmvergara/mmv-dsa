@@ -36,7 +36,7 @@ def pre_order_traversal_rec(root):
     return out
 
 
-print(pre_order_traversal_rec(root))
+# print(pre_order_traversal_rec(root))
 
 def pre_order_traversal_ite(root):
     if root is None:
@@ -78,7 +78,7 @@ def inorder_traversal_rec(root):
     dfspot(root)
     return out
 
-#print(inorder_traversal_rec(root))
+print(inorder_traversal_rec(root))
 
 def inorder_traversal_ite(root):
     out = []
