@@ -10,49 +10,45 @@ def exist(self, board: list[list[str]], word: str) -> bool:
     total_row = len(board)
     first_letter = word[0]
 
-
-    def addTup(tup1,tup2):
+    def addTup(tup1, tup2):
         return tuple(map(lambda i, j: i + j, tup1, tup2))
 
-
-    def dfs(row,col,i,paths):
-        print(i,paths,len(word))
+    def dfs(row, col, i, paths):
+        print(i, paths, len(word))
         if i == len(word):
             return True
-        
+
         # if row col is out of bounds
         # if current letter is does not match current board letter
         # if the loc is already  in path
-        if (row < 0 or col < 0 
-                or row >= total_row 
-                or col >= total_col 
-                or word[i] != board[row][col] 
-                or (row,col) in paths):
+        if (
+            row < 0
+            or col < 0
+            or row >= total_row
+            or col >= total_col
+            or word[i] != board[row][col]
+            or (row, col) in paths
+        ):
             return False
-        paths.add((row,col))
+        paths.add((row, col))
 
         for d in directions:
-            loc = addTup(d,(row,col))
-            if dfs(loc[0],loc[1],i+1,paths):
+            loc = addTup(d, (row, col))
+            if dfs(loc[0], loc[1], i + 1, paths):
                 return True
-            
-
-
 
     # find the first letter word index
     for row in range(len(board)):
         for col in range(total_col):
             if board[row][col] == first_letter:
-                if dfs(row,col,0,set()):
+                if dfs(row, col, 0, set()):
                     return True
 
     return False
 
 
-
-
-
-
-res = exist("",[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"SEE")
+res = exist(
+    "", [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "SEE"
+)
 
 print(res)
