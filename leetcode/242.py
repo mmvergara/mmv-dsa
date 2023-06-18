@@ -1,50 +1,22 @@
-# def isAnagram(self, s: str, t: str) -> bool:
-#     if len(s) != len(t):
-#         return False
-#     s_sum = 0
-#     t_sum = 0
-#     i = 0
-#     for i in range(len(s)):
-#         s_sum+=ord(s[i])
-#         t_sum+=ord(t[i])
-#     if s_sum == t_sum:
-#         return True
-#     return False
-      
-# 1. edge case s and t are not the same size then it is !anagram
-# 2. loop through and store characters count in hash
-# 3. use the 2 hashes to make sure every characters in t have the same count as s and vice versa
-
 def isAnagram(self, s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
-    s_chars = {}
-    t_chars = {}
+    s_dict = {}
+    t_dict = {}
 
     for i in range(len(s)):
-        if s[i] not in s_chars:
-            s_chars[s[i]] = 1
+        if s[i] not in s_dict:
+            s_dict[s[i]] = 1
         else:
-            s_chars[s[i]] += 1
-        
-        if t[i] not in t_chars:
-            t_chars[t[i]] = 1
+            s_dict[s[i]] += 1
+
+        if t[i] not in t_dict:
+            t_dict[t[i]] = 1
         else:
-            t_chars[t[i]] += 1
-    # assuming 0(1) in getting the size of the map
-    if len(s_chars) != len(s_chars):
-        return False
-    
-    for k,v in s_chars.items():
-        if t_chars[k] != v:
-          return False
-        
-    return True
+            t_dict[t[i]] += 1
+
+    return t_dict == s_dict
 
 
-isAnagram("","yoyo","yoyo")
-        
-
-        
-          
-        
+print(ord("b"))
+print(ord("a"))
