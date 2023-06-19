@@ -25,7 +25,7 @@ int main() {
 	vector<int> arr = {2,7,11,15};
 	int target = 9;
 
-	cout << arr << endl;
+	cout << arr[1] << endl;
 
 	vector<int> res = twoSum(arr,target);
 	cout << res[0] << " " << res[1] << "\n";
