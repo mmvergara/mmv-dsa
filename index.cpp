@@ -4,24 +4,20 @@
 #include <unordered_map>
 using namespace std;
 
-
-
-
-
-vector<int> twoSum(vector<int>& nums, int target) {
-	int left = 0;
-	int right = nums.size()-1;
+vector<int> ts(vector<int>& ns, int t) {
+	int l = 0;
+	int r = ns.size()-1;
 	
-		while (left < right){
-		int sum = nums[left] + nums[right];
-		if (sum == target){
-			return {left,right};
+		while (l < r){
+		int s = ns[l] + ns[r];
+		if (s == t){
+			return {l,r};
 		}
 
-		if (sum > target){
-			right--;
+		if (s > target){
+			r--;
 		} else {
-			left++;
+			l++;
 		}
 	}
 	return {-1,-1,};
