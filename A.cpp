@@ -2,23 +2,30 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <set>
+#include <algorithm>
+
 using namespace std;
 
-int gameWithCells(int r, int c){
+  
+int primeCount(long n) {
+	vector<int> primes = {};
 
-	if (r % 2 != 0) r+=1;
-	if (c % 2 != 0) c+=1;
+	for ( int i = 2 ; i <= n ; i++){
+		if (i % 2 != 0){
+			primes.push_back(i);
+		}
+	}
 
-	return (r/2) * (c/2);
-	
+	for (const auto& el : primes){
+		cout << el << endl;
+	}
 
-
+	return 0;
 }
 
-
 int main(){
-	int res = gameWithCells(2,2);
-	cout << "\n\nres=" << res << endl;
+	int res = primeCount(47);
 	return 0;
 
 }
