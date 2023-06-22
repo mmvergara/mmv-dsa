@@ -4,28 +4,28 @@
 #include <cmath>
 #include <set>
 #include <algorithm>
+#include <unordered_map>
 
 using namespace std;
 
-  
-int primeCount(long n) {
-	vector<int> primes = {};
 
-	for ( int i = 2 ; i <= n ; i++){
-		if (i % 2 != 0){
-			primes.push_back(i);
+vector<int> twoSum(vector<int> nums, int target){
+	unordered_map<int,int> cs = {};
+
+	for (int i = 0; i < nums.size(); i++){
+		int complement = target - nums[i];
+		if (cs.find(complement) != cs.end()){
+			return {i,cs[complement]};
 		}
+		cs[nums[i]] = i;
 	}
-
-	for (const auto& el : primes){
-		cout << el << endl;
-	}
-
-	return 0;
+	return {-1,-1};
 }
 
 int main(){
-	int res = primeCount(47);
+	vector<int> inp = {1,2,3,4};
+	vector<int> res = twoSum(inp,7);
+	cout << res[0] << res[1] << endl;
 	return 0;
 
 }

@@ -1,24 +1,5 @@
-# MMV-DSA
-# Data Structures and Algorithms
-
-- Binary Tree
- - BFS
-
-- Recursion
- - fibonacci
- - merge sort
+# Review
+https://leetcode.com/problems/trapping-rain-water/solutions/3118211/python-solution-easy-to-understand/
 
 
-- Sorting
- - merge sort
- - quick sort
-
-https://leetcode.com/list/xi4ci4ig/
-
-# Reviews
-  - 26
-  
-# Math 
- - Combinatronics
- - Number Theory
 

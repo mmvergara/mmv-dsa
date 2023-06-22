@@ -77,7 +77,7 @@ if has("gui_running")
   vmap <C-z> u
   vmap <C-c> "+y<CR>
   vmap <C-v> "+p<CR>
-
+  nnoremap <F2> :set invpaste paste?<CR>
   
   autocmd BufEnter * silent! lcd %:p:h
 
