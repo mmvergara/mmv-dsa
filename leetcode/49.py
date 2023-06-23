@@ -1,3 +1,6 @@
+# Another approach is
+# sort the str, if the str matches something in the hashlist, put it in there else put a new one with the array as the first pair
+# return the values of the hashlist
 
 def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
     hashlist = []

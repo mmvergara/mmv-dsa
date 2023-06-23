@@ -1,3 +1,9 @@
+
+# Validate rows and cols
+# Find the centers
+# go around the centers and check for duplicates
+
+
 def isValidSudoku(self, board: list[list[str]]) -> bool:
     # validate rows
     for i in range(len(board)):
