@@ -1,6 +1,8 @@
 from dsa import *
 import math
 
+# just binary search then find the target
+# if we cannot find get the last element of the current middle array and deduce from there wether to go right or left
 
 def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
     def binaryMatrix(matrix, start, end, target):

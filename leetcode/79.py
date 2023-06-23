@@ -1,3 +1,7 @@
+# We are usin dfs, first of all find the locations where the val is == to the first letter of the word
+
+# then do dfs 4 directions in that current location, base case is if the len(word) == to the ith iteration in the dfs
+# we also keep tract of the visited paths in the dfs 
 def exist(self, board: list[list[str]], word: str) -> bool:
     directions = [
         (-1, 0),  # Up
@@ -14,7 +18,6 @@ def exist(self, board: list[list[str]], word: str) -> bool:
         return tuple(map(lambda i, j: i + j, tup1, tup2))
 
     def dfs(row, col, i, paths):
-        print(i, paths, len(word))
         if i == len(word):
             return True
 

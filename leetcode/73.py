@@ -1,4 +1,6 @@
+# find the zeroes perform dfs in 4 directions up down left right while traveling you change the values to 0
 
+# add tuple is there for locations
 def setZeroes(self, matrix: list[list[int]]) -> None:
     # find all of the 0's row and col index
     max_row = len(matrix)-1

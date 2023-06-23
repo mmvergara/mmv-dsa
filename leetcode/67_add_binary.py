@@ -1,3 +1,9 @@
+# adding binary numbers you should know the rules of the adding
+
+# if you add 1 and the res == 3 then carry == 1 and num should be 1
+# if you add 1 and the res == 2 then carry == 1 and num should be 0
+# if you add 1 and the res == 1 then carry == 0 and num should be 1
+
 def addBinary(self, a: str, b: str) -> str:
     al = len(a) - 1
     bl = len(b) - 1
