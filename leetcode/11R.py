@@ -1,10 +1,12 @@
 
 def maxArea(self, height: list[int]) -> int:
     # start from outwards with left and right pointer
-    # move the the pointer with the lowest value inwards until you can't move them anymore
     left = 0
     right = len(height)-1
     maxA = 0
+
+    # move the the pointer with the lowest value inwards until you can't move them anymore
+    # while checking if there is a new MaxArea
     while left < right:
         minH = min(height[left],height[right])
         width = right - left

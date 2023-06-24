@@ -1,17 +1,16 @@
 
-# sort the arr
-# loop through array
-# with right and left pointer to find which one sums to 0
 # left and left-1 should not be equal so we will have unique values
-
 def threeSum(self, nums: list[int]) -> list[list[int]]:
+    # sort the arr
     arr = sorted(nums)
-
     out = []
+
+    # loop through array
     for i in range(len(arr)):
         if i > 0 and arr[i] == arr[i-1]:
             continue
 
+        # with right and left pointer to find which one sums to 0
         left = i + 1
         right = len(arr)-1
 
