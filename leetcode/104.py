@@ -6,6 +6,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+        
 def maxDepth(self, root: Optional[TreeNode]) -> int:
     if not root: return 0
     highest_depth = 0
