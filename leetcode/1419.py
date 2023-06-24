@@ -1,6 +1,5 @@
 import sys
 
-
 def average(self, salary: list[int]) -> float:
     highest = 0
     totalSum = 0
