@@ -1,3 +1,4 @@
+# Get the starting index of the needle string
 def strStr(self, haystack: str, needle: str) -> int:
       try:
           return haystack.index(needle)
