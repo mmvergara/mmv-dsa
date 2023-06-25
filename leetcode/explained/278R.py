@@ -4,6 +4,7 @@ def isBadVersion(x:int):
 # The isBadVersion API is already defined for you.
 # def isBadVersion(version: int) -> bool:
 
+# We're using the binary search to search for the first bad version 
 def firstBadVersion(self, n: int) -> int:
     if n == 1: return 1
     left = 0 

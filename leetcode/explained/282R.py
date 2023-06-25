@@ -1,11 +1,6 @@
 def moveZeroes(self, nums: list[int]) -> None:
-    """
-    Do not return anything, modify nums in-place instead.
+    # Two pointer solution we're using two pointers to bubble up the zeroes to the end
 
-    brute force is just to sort the array backwards
-
-    uses 2 pointers.
-    """
     slow = 0
     for fast in range(len(nums)):
         if nums[fast] != 0 and nums[slow] == 0:
