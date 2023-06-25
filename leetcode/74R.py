@@ -2,7 +2,7 @@ from dsa import *
 import math
 
 # just binary search then find the target
-# if we cannot find get the last element of the current middle array and deduce from there wether to go right or left
+
 
 def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
     def binaryMatrix(matrix, start, end, target):
@@ -17,6 +17,7 @@ def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
         if target in matrix[mid]:
             return True
 
+        # if we cannot find get the last element of the current middle array and deduce from there wether to go right or left
         if target > matrix[mid][-1]:
             return binaryMatrix(matrix, mid + 1, end, target)
         else:
