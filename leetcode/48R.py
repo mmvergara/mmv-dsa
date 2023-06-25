@@ -2,8 +2,10 @@
 # array is rotating counter clockwise, rows become cols and vice versa
 
 def rotate(self, matrix: list[list[int]]) -> None:
+    # new arr with pre-allocate the size of the matrix
     new_arr = [0] * len(matrix)
 
+    # create the rotate array
     for col in range(len(matrix[0])):
         subArr = [0] * len(matrix[0])
         i = 0
@@ -15,6 +17,7 @@ def rotate(self, matrix: list[list[int]]) -> None:
 
         new_arr[col] = subArr
     
+    # merge the new_arr with the original arr to modify it
     for col in range(len(matrix[0])):
         for row in range(len(matrix)):
             matrix[row][col] = new_arr[row][col]
