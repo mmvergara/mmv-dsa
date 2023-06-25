@@ -1,3 +1,4 @@
+# We need to remove the spaces first.
 import re
 def isPalindrome(self, s: str) -> bool:
     s = re.sub(r'[\W_]', '', s).lower()

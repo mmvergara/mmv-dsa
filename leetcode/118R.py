@@ -1,4 +1,4 @@
-
+# Generates Pascal triangle
 def generate(self, numRows: int) -> list[list[int]]:
     out = [[1]]
     for i in range(numRows-1):
@@ -12,4 +12,5 @@ def generate(self, numRows: int) -> list[list[int]]:
 
 
 
-generate("",5)
+res = generate("",5)
+print(res)
