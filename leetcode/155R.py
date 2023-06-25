@@ -1,4 +1,5 @@
 
+# min stack is a stack where we keep tract of the current minimum value in the stack
 class MinStack:
 
     def __init__(self):

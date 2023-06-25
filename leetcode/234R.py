@@ -1,4 +1,4 @@
-from typing import Optional
+from dsa import *
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -7,6 +7,8 @@ class ListNode:
 
     def __str__(self) -> str:
         return f"[ val: {self.val}, next: {self.next}]"
+
+# Is palindrome linked list
 
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:

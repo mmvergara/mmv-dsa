@@ -9,13 +9,7 @@ class ListNode:
     def __str__(self) -> str:
         return f"[ val: {self.val}, next: {self.next}]"
 
-
-
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+# traverse through the linked list, and then the node being traversed will always be the new tail in the new linkedlist
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         new_head = None

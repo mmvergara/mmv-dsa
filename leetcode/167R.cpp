@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+// Two sum but with a sorted array, initialize right and left pointer
+// increment left pointer to increase the sum if sum < target
+// decrement right pointer to decrease the sum if sum > target
+
 vector<int> twoSum(vector<int>& nums, int target) {
 	int left = 0;
 	int right = nums.size()-1;

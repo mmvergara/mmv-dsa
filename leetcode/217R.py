@@ -1,4 +1,4 @@
-
+# is there a repeatign element
 def solve(nums:list[int]) -> bool:
     seen = set()
     for n in nums:

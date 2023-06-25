@@ -1,5 +1,8 @@
 from dsa import *
 
+# Two sum but with a sorted array, initialize right and left pointer
+# increment left pointer to increase the sum if sum < target
+# decrement right pointer to decrease the sum if sum > target
 
 def twoSum(self, numbers: List[int], target: int) -> List[int]:
     i = 0

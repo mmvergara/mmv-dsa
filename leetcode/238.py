@@ -3,6 +3,7 @@
 def productExceptSelf(self, nums: list[int]) -> list[int]:
     prefix = []
     postfix = [0 for i in range(len(nums))] 
+
     # populate postifx
     prod = 1
     for n in nums:
