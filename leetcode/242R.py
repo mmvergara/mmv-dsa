@@ -1,3 +1,4 @@
+#IsAnagram is just counting the frequency of each character in both string and comparing them
 def isAnagram(self, s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
