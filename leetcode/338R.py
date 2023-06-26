@@ -1,4 +1,8 @@
 
+# uses recursive to count bits
+# Take a num and then recursively divide it by 0 and taking the remainder to count
+# more info on freecodecamp Recursion in programming video 29:00
+
 def countBits(self, n: int) -> list[int]:
     def dec_to_binary_count_1(num:int,count=0)->str:
       if num == 0:

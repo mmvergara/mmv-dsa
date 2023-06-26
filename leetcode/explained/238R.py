@@ -1,5 +1,5 @@
 
-
+# using prefix and postfix
 def productExceptSelf(self, nums: list[int]) -> list[int]:
     prefix = []
     postfix = [0 for i in range(len(nums))] 
@@ -18,8 +18,8 @@ def productExceptSelf(self, nums: list[int]) -> list[int]:
     prod = 0
     
     out = []
+    
     # calculate product
-    print(prefix)
     for i in range(len(nums)):
         prefixProd = 1
         postfixProd = 1
@@ -32,6 +32,7 @@ def productExceptSelf(self, nums: list[int]) -> list[int]:
         if (i+1) <= len(nums)-1:
             postfixProd = postfix[i+1]
 
+        # multiply both ends of prefix and postfix
         out.append(postfixProd*prefixProd)
 
     return out
