@@ -1,4 +1,4 @@
-
+# Kadanes algorithm
 def maxSubArray(self, nums: list[int]) -> int:
     total = 0
     highest = float('-inf')
