@@ -1,3 +1,4 @@
+# Just read the code lol
 def isSubsequence(self, s: str, t: str) -> bool:
     if s == "":
         return True 

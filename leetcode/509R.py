@@ -1,3 +1,5 @@
+# Uses memo variable as a caching mechanism to prevent repeated work
+# basic example of dynamic programming
 
 def fib(n: int,memo={}) -> int:
     if n in memo:
