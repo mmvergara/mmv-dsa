@@ -4,6 +4,9 @@ using namespace std;
 
 unordered_map<int, int> cache;
 
+// uses recursion to determine the tribonacci of a number
+// also uses a cache to prevent repeated work
+ 
 int tribonacci(int n){
 	if (n <= 0){
 		return 0;

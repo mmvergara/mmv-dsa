@@ -1,6 +1,6 @@
-from dsa import *
 
-def runningSum(self, nums: List[int]) -> List[int]:
+# sum prefix
+def runningSum(self, nums: list[int]) -> list[int]:
     total = 0
     out = [0] * len(nums)
     for i in range(len(nums)):

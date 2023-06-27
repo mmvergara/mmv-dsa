@@ -1,3 +1,5 @@
+# 2 4 6 8 9 10 - Interval = 2  === True
+# no consistent interval means we cannot make an arithmetic progression
 
 def canMakeArithmeticProgression(self, arr: list[int]) -> bool:
     arr = sorted(arr)
