@@ -3,4 +3,4 @@ def singleNumber(self, nums: List[int]) -> int:
     for num in nums:
         xor ^= num
         
-    return xvsc
+    return xor

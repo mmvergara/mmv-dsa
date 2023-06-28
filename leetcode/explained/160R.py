@@ -1,3 +1,5 @@
+from dsa import *
+
 
 def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
     # create a set to store memory locations of nodes
@@ -10,7 +12,6 @@ def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[List
         mset.add(id(currentA))
         currentA = currentA.next
 
-    
     # traverse in headNode B
     currentB = headB
     while currentB:
@@ -18,5 +19,3 @@ def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[List
         if id(currentB) in mset:
             return currentB
         currentB = currentB.next
-
-

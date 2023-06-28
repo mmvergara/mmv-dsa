@@ -1,3 +1,4 @@
+from dsa import *
 
 def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
     # hash to store all seen values
