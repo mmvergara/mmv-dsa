@@ -35,7 +35,6 @@ def findMin(self, nums: List[int]) -> int:
 
 
 
-
 findMin("",[3,4,5,1,2])
 findMin("",[4,5,6,7,0,1,2])
 findMin("",[11,13,15,17])
