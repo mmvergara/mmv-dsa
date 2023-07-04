@@ -4,6 +4,7 @@
   },
   "python.formatting.provider": "none",
   "files.associations": {
-    "vector": "cpp"
+    "vector": "cpp",
+    "iostream": "cpp"
   }
 }
