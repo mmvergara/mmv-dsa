@@ -1,5 +1,6 @@
 import math
 
+
 def get_factors(num1, num2):
     factors = []
     for i in range(1, min(num1, num2) + 1):
@@ -7,9 +8,12 @@ def get_factors(num1, num2):
             factors.append(i)
     return factors
 
+
 def restaurant(l, b):
     if l == b:
         return 1
-    x = get_factors(l,b)
-    return math.trunc((l*b)/(x[-1] * x[-1]))
-    
+    # get the highest factor
+    factors = get_factors(l, b)
+
+    # then divide it to the product of the 2 grid size
+    return math.trunc((l * b) / (factors[-1] * factors[-1]))
