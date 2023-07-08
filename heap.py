@@ -58,8 +58,11 @@ class MyHeap:
             # Recalculate left and right
             left = (2*i) + 1
             right = (2*i) + 2
+ 
+
 
 
 h = MyHeap()
 h.insert(1)
+h.insert(0)
 print(h.heap)

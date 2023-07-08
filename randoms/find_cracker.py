@@ -5,7 +5,6 @@ def find_hack(record):
         "C": 10,
         "D": 5
     }
-  
   def has_additional_points(grades):
     if len(grades) < 5:
       return False

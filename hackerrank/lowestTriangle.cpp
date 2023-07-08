@@ -19,5 +19,4 @@ int main(){
 	int res = lowestTriangle(17,100);
 	cout << res;
 	return 0;
-
 }
