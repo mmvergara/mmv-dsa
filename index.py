@@ -1,11 +1,29 @@
-import heapq
+def matToGraph(mat):
+    ROWS = len(mat)
+    COLS = len(mat[0])
+    g = {}
+
+    def withinBounds(r, c):
+        return 0 <= r and r < ROWS and 0 <= c and c < COLS
+
+    dirs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+
+    for r in range(ROWS):
+        for c in range(COLS):
+            g[(r, c)] = []
+            for d in dirs:
+                dx, dy = d
+                neighborX = r + dx
+                neighborY = c + dy
+                if withinBounds(neighborX, neighborY):
+                    neighborNode = {(neighborX, neighborY): mat[neighborX][neighborY]}
+                    g[(r, c)].append(neighborNode)
+
+    print(g)
+
+    pass
 
 
-heap = []
-heapq.heappush(heap,4)
-heapq.heappush(heap,8)
-heapq.heappush(heap,1)
-heapq.heappush(heap,-7)
-heapq.heappush(heap,24)
-heapq._heapify_max(heap)
-print(heap)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+matToGraph(matrix)
