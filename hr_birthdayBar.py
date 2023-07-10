@@ -2,27 +2,20 @@
 from collections import deque
 
 def birthday(arr, d, m):
-    curArr = deque([arr[i] for i in range(m)])
-    
-    left = 0
-    right = m
 
+    curArr = deque([arr[i] for i in range(m)])
+    right = m
     res = 0
 
     if sum(curArr) == d:
         res+=1
 
     while right < len(arr):
-        
-        
         curArr.popleft()
         curArr.append(arr[right])
-
         if sum(curArr) == d:
             res+=1
-
         right+=1
-        left+=1
 
     return res
 
