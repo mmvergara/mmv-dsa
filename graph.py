@@ -13,7 +13,7 @@ visited = set()
 
 def dfs(graph, source, target, path: list):
     path.append(source)
-    if source == target:
+    if source == target:    
         return path.copy()
 
     if source in visited:

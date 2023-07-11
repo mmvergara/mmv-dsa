@@ -9,7 +9,6 @@ def migratoryBirds(arr):
     for i in range(len(f)): 
         if f[maxf] < f[i]:
             maxf = i
-    print(maxf)
     return []
 
 
