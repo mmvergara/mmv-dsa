@@ -2,19 +2,14 @@ from dsa import *
 
 
 def spiralMatrix(m: int, n: int, head: Optional[ListNode]) -> List[List[int]]:
-    
     matrix = [[-1 for _ in range(n)] for x in range(m)]
-
     getNextDir = {"right": "bottom", "bottom": "left", "left": "top", "top": "right"}
     dirsVal = {"right": (0, 1), "bottom": (1, 0), "left": (0, -1), "top": (-1, 0)}
     visited = set()
-
     def dfs(r, c, lastDir):
-
         if (r, c) in visited:
             return
         visited.add((r, c))
-
         if head == None:
             return
         
