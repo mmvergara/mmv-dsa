@@ -5,7 +5,7 @@ def minEatingSpeed(self, piles: list[int], h: int) -> int:
     left = 1
     right = max(piles)
     res = right
-
+    
     while left <= right:
         k = (left+right) // 2
         htta = 0
