@@ -1,49 +1,20 @@
 # generate all possible permutations
 
-x = [1,2,3]
-res = []
+x = [1, 2, 3]
+ss = []
 n = 2
+
+total = []
+
+
 def search(k):
     if k == n:
-        print(res)
+        total.append(ss.copy())
     else:
-        search(k+1)
-        res.append(k)
-        search(k+1)
-        res.pop()
-
-
-
-
-
-
+        search(k + 1)
+        ss.append(k+1)
+        search(k + 1)
+        ss.pop()
 
 search(0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(total)
