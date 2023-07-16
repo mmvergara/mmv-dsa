@@ -40,12 +40,29 @@ x = [
     "import sys",
     "in",
     "set()",
+    "add",
+    "remove",
+    "csum",
+    "copy",
+    "search" "mp = {}",
+    "hset = {}",
+    "target",
+    "rem",
+    "arr[r][c]",
+    "arr[i]",
+    "self.left",
+    "self.right",
+    "k",
+    "int",
+    "bool",
+    "vector",
+    "vector<int>",
 ]
 
 # randomize coding strings'
 
 
 shuffle(x)
-print(" ".join(x)+" ".join(x))
+print(" ".join(x))
 shuffle(x)
-print()
+print(" ".join(x))
