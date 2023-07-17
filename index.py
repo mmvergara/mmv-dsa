@@ -1,9 +1,16 @@
 import sys
 
 print(sys.executable)
-x = {
-    "a": (inf, None),
-    "b": (5, {"b": 5, "c": 3}),
-    "c": (1, {"a": 5, "c": 1, "d": 4}),
-    "d": (4, {"a": 5, "c": 1, "d": 4}),
+{
+    (0, 0): (1, None),
+    (0, 1): (10, "right"),
+    (1, 0): (3, "down"),
+    (1, 1): (12, "right"),
+    (2, 0): (5, "down"),
 }
+
+
+up
+up
+right
+    
