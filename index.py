@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sys
 
 print(sys.executable)
@@ -9,11 +8,3 @@ print(sys.executable)
     (1, 1): (12, "right"),
     (2, 0): (5, "down"),
 }
-
-
-up
-up
-right
-    
-=======
->>>>>>> 6ca558141acc3a4407073ec7235a4706bad2587a
