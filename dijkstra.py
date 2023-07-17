@@ -8,9 +8,6 @@ graph = {
 }
 
 
-# shortest path to a - b is 8
-
-
 def dijk(graph: dict, start: str, target: str):
     dist = graph.copy()
     for x in dist.keys():
