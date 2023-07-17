@@ -1,6 +1,8 @@
+import heapq
+
 graph = {
-    "a": {"b": 5, "c": 3},
-    "b": {"a": 5, "c": 1, "d": 4},
+    "a": {"b": 8, "c": 0},
+    "b": {"a": 1, "c": 1, "d": 4},
     "c": {"a": 3, "b": 1, "d": 6},
     "d": {"b": 4, "c": 6},
 }
@@ -13,35 +15,33 @@ def dijk(graph: dict, start: str, target: str):
     dist = graph.copy()
     for x in dist.keys():
         dist[x] = (float("inf"), None)
-    # dist =  key: (distance,lastNode)
+    dist[start] = (0, None)
 
-    cDist = 0
-    lastStart = None
+    visited = set()
+    heap = [(0, start)]
+    while heap:
+        curD, node = heapq.heappop(heap)
 
-    curNode = start
-    while curNode != target:
-        shortestNode = None
-        shortestNodeDistance = None
+        if node in visited:
+            continue
+        visited.add(node)
+        for neighbor, weight in graph[node].items():
+            # cur node distance +  neighbor distance
+            totalD = weight + curD
+            heapq.heappush(heap, (totalD, neighbor))
+            if totalD < dist[neighbor][0]:
+                # append new min distance
+                # append last path
+                dist[neighbor] = (totalD, node)
+    # backtract reconstruct the path
 
-        for n in graph[curNode].keys():
-            if lastStart == n or n == curNode:
-                continue
-            newD = cDist + graph[curNode][n]
-
-            if newD < dist[n][0]:
-                dist[n] = (newD, curNode)
-            if shortestNode is None or shortestNodeDistance > newD:
-                shortestNodeDistance = newD
-                shortestNode = n
-        print(f"shortest node {shortestNode}")
-        lastStart = curNode
-        curNode = shortestNode
-        print(curNode)
-        if curNode == target:
-            print("Found it")
-    print(dist)
-
-    pass
+    curN = target
+    path = []
+    while curN:
+        path.append(curN)
+        _, n = dist[curN]
+        curN = n
+    print(list(reversed(path)))
 
 
 dijk(graph, "a", "d")
