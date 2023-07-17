@@ -2,19 +2,31 @@ from dsa import *
 
 
 def letterCasePermutation(self, s: str) -> List[str]:
-    perms = set()
+    perms = [""]
 
-    def rec(s, i, curS: str):
-        print(curS)
-        if i == len(s):
-            perms.add(curS[:])
-            return
-        rec(s, i + 1, curS[:].replace(curS[i], curS[i].upper()))
-        rec(s, i + 1, curS[:])
+    for char in s:
+        if char.isalpha():
+            perms = [perm + char.lower() for perm in perms] + [
+                perm + char.upper() for perm in perms
+            ]
+            print(perms)
+        else:
+            perms = [perm + char for perm in perms]
+            print(perms)
 
-    rec(s[:], 0, s[:].lower())
     return perms
 
 
-r = letterCasePermutation("", "RmR")
-print(r)
+print(letterCasePermutation("", "rmrqweqwe"))
+
+
+# def letterCasePermutation(self, s: str) -> List[str]:
+#     perms = ['']
+
+#     for char in s:
+#         if char.isalpha():
+#             perms = [perm + char.lower() for perm in perms] + [perm + char.upper() for perm in perms]
+#         else:
+#             perms = [perm + char for perm in perms]
+
+#     return perms
