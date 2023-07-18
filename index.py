@@ -1,10 +1,26 @@
 import sys
 
-print(sys.executable)
-{
-    (0, 0): (1, None),
-    (0, 1): (10, "right"),
-    (1, 0): (3, "down"),
-    (1, 1): (12, "right"),
-    (2, 0): (5, "down"),
-}
+
+class Node:
+    def __init__(self, val=None, next=None):
+        self.val = val
+        self.next = next
+
+    def __repr__(self) -> str:
+        return f"{{ val: {self.val}, next: {self.next}}}"
+
+
+head = Node(1, Node(2, Node(3, Node(4))))
+
+
+target = 4
+change = Node(10)
+
+cur = head
+while cur.next.val != target:
+    cur = cur.next
+
+change.next = cur.next.next
+cur.next = change
+
+print(head)
