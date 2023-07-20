@@ -1,34 +1,27 @@
 #include <iostream>
-#include <vector>
-
-std::vector<int> subset;
-int n;
-
-void processSubset() {
-    // Print the subset
-    std::cout << "{ ";
-    for (int element : subset) {
-        std::cout << element << "";
-    }
-    std::cout << "}\n";
-}
-
-void search(int k) {
-    if (k == n) {
-        processSubset();
-    } else {
-        search(k + 1);
-        subset.push_back(k);
-        search(k + 1);
-        subset.pop_back();
-    }
-}
+#include <cstdio>
+using namespace std;
 
 int main() {
-    std::cout << "Enter the value of n: ";
-    std::cin >> n;
-
-    search(0);
-
+    // Complete the code.
+	
+	int d;
+    long ld;
+    char c;
+    float f;
+    double lf;
+    
+    scanf("%d %ld %c %f %lf" , &d,&ld,&c,&f,&lf);
+    printf("%d" ,d);
+	cout << "\n";
+	printf("%ld",ld);
+	cout << "\n";
+	printf("%c",c);
+	cout << "\n";
+	printf("%f",f);
+	cout << "\n";
+	printf("%lf",lf);
     return 0;
 }
+
+
