@@ -1,11 +1,10 @@
-# is there a repeatign element
-def solve(nums:list[int]) -> bool:
-    seen = set()
-    for n in nums:
-        if n in seen:
+def containsDuplicate(self, nums):
+    seen = {}
+    for x in nums:
+        if x in seen:
             return True
         else:
-            seen.add(n)
+            seen[x] = x
     return False
 
-
+print(containsDuplicate(2,[1,2]))

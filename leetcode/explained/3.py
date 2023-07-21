@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/
 def lengthOfLongestSubstring(self, s: str) -> int:
     if len(s) == 0:
         return 0
