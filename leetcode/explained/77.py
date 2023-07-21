@@ -17,16 +17,4 @@ def combine(self, n: int, k: int) -> List[List[int]]:
     return res
 
 
-arr = [1, 2, 3, 4]
-print(arr)
-
-
-def reverseArr(arr):
-    arr.reverse()
-
-
-reverseArr(arr)
-
-print(arr)
-
 combine("", 4, 2)
