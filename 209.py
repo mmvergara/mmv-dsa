@@ -1,32 +1,21 @@
-from dsa import *
-
-
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        if len(nums) == 0:
+        if not nums or len(nums) == 0:
             return 0
-        if len(nums) == 1 and nums[0] == target:
-            return 1
 
-        if target in nums:
-            return 1
-
-        minSA = float("-inf")
-
-        l = 0
-        r = 0
+        # Initialize pointers, current sum, and minimum subarray length
+        l, r = 0, 0
         curSum = nums[0]
-        while r < len(nums) - 1:
-            if curSum < target:
-                r += 1
-                if nums[r] == target:
-                    return 1
-                curSum += nums[r]
+        minSA = float("inf")
 
-            if curSum > target:
-                curSum -= nums[l]
+        while r < len(nums):
+            if curSum >= target:
+                minSA = min(minSA, r - l + 1)  # Update the minimum subarray length
+                curSum -= nums[l]  # Move the left pointer to shrink the window
                 l += 1
+            else:
+                r += 1  # Move the right pointer to expand the window
+                if r < len(nums):
+                    curSum += nums[r]
 
-            minSA = min(minSA, abs(l - r))
-
-        return minSA
+        return minSA if minSA != float("inf") else 0
