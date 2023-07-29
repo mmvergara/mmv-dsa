@@ -1,35 +1,75 @@
-import heapq
-import collections
 from dsa import *
-def networkDelayTime(times: List[List[int]], n: int, k: int) -> int:
-    edges = collections.defaultdict(list)
-    print(edges)
+import heapq
 
-    for u,v,w in times:
-        edges[u].append((v,w))
 
-    minHeap = [(0,k)]
-    visit = set()
-    maxCost = 0
+def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+    # source : [ ( weight , target )]
+    def build(times):
+        ans = {}
+        for n in times:
+            if n[0] in ans:
+                ans[n[0]].append((n[2], n[1]))
+            else:
+                ans[n[0]] = [(n[2], n[1])]
+        return ans
 
-    while minHeap:
-        #pop from heap
-        weight1, node1 = heapq.heappop(minHeap)
+    visited = set()
+    graph = build(times)
 
-        #keep tract of visited nodes
-        if node1 in visit:
+    queue = [(0, k)]
+    dist = {}
+    while queue:
+        curW, curN = heapq.heappop(queue)
+        if curN in visited:
             continue
-        visit.add(node1)
-        
-        # reseat the max cost
-        maxCost = max(maxCost,weight1)
-        
-        # go through all of the neighboring nodes
-        for node2,weight2 in edges[node1]:
-            if node2 not in visit:
-                # add the last weight from the current node to the neighboring node to be visited
-                heapq.heappush(minHeap,(weight2+weight1,node2))
-    return maxCost if len(visit) == n else -1
+        visited.add(curN)
+        if curN not in graph:
+            continue
+        for tW, tN in graph[curN]:
+            if tN == k:
+                continue
+            totalDistFromCurn = tW + curW
+            if tN not in dist:
+                dist[tN] = totalDistFromCurn
+                heapq.heappush(queue, (totalDistFromCurn, tN))
+                continue
+            if dist[tN] > totalDistFromCurn:
+                dist[tN] = totalDistFromCurn
+                heapq.heappush(queue, (totalDistFromCurn, tN))
 
-res = networkDelayTime([[2,1,1],[2,3,1],[3,4,1]],4,2)
+    if len(visited) != n:
+        return -1
+    if len(dist) == 0:
+        return 0
+    print(dist)
+    return max(dist.values())
+
+
+res = networkDelayTime(
+    "",
+    [
+        [4, 3, 76],
+        [1, 4, 70],
+        [1, 3, 37],
+        [1, 2, 53],
+        [3, 2, 66],
+        [3, 4, 22],
+        [5, 4, 52],
+        [2, 1, 23],
+        [5, 1, 27],
+        [4, 5, 88],
+        [5, 2, 26],
+        [2, 4, 41],
+        [4, 2, 66],
+        [4, 1, 93],
+        [3, 5, 78],
+        [2, 5, 9],
+        [5, 3, 50],
+        [3, 1, 17],
+        [1, 5, 12],
+        [2, 3, 87],
+    ],
+    5,
+    5,
+)
 print(res)
