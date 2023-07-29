@@ -1,3 +1,5 @@
+from dsa import *
+
 
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -5,7 +7,7 @@ class Solution:
             return None
 
         current = head
-        
+
         while current.next:
             if current.val == current.next.val:
                 print("same val as next")
