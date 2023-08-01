@@ -1,1 +1,1 @@
-print("" in "asa")
+print("adab"[2:3+1])
