@@ -1,31 +1,38 @@
+from dsa import *
 
-# Uses Monotonic stack 
-def nextGreaterElement(self, nums1: list[int], nums2: list[int]) -> list[int]:
-    # initialize stack and dictionary
+# learned, for getting array num indices in correlations to the other array, we can just use a hash table to the array 2 result
+
+# ex arr1 [1,2,3]
+# arr 2 [3,1,2]
+# proccess the arr so that for each value will be a key in the hashmap to get the next greater
+# {
+#   1: res
+#   2: res
+#   3: res
+# }
+# then just loop on arr 1 using map[arr[i]]
+
+
+def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
     stack = []
-    dic = {}
-    
-    # loop through nums 2 which contains all of the reference array
-    for i in range(len(nums2)):
+    next_greater = {}
 
-        curT = (nums2[i],i)
+    # Preprocess nums2 to find the next greater element for each element
+    for num in nums2:
+        while stack and stack[-1] < num:
+            next_greater[stack.pop()] = num
+        stack.append(num)
+    print(next_greater)
 
-        # if current num is less than the top of the stack
-        # keep popping the stack and process popped values tobe the dic[value] = currentT
-        while stack and nums2[i] > stack[-1][0]:
-            sv,si = stack.pop()
-            dic[sv] = curT
-        # finally push the current to the top of she stack
-        stack.append(curT)
-    
-    for i in range(len(nums1)):
-        if nums1[i] in dic:
-            nums1[i] = dic[nums1[i]][0]
-        # if there is no greater next element put -1 as a value
-        else:
-            nums1[i] = -1
+    # Initialize the result list with -1
+    res = [-1] * len(nums1)
 
-    return nums1
+    # Fill the result list with the next greater element for each element in nums1
+    for i, num in enumerate(nums1):
+        if num in next_greater:
+            res[i] = next_greater[num]
+
+    return res
 
 
-nextGreaterElement("",[4,1,2],[1,3,4,2])
+nextGreaterElement("", nums1=[1, 3, 5, 2, 4], nums2=[6, 5, 4, 3, 2, 1, 7])
