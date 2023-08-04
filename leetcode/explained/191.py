@@ -2,6 +2,7 @@ class Solution:
     def hammingWeight(self, n: int) -> int:
         if n == 0:
             return n
+
         def rec(n, c=0):
             if n == 1:
                 return c
