@@ -17,33 +17,31 @@ def islandCount(matrix) -> int:
             return 0
         # check if visited and if it's a water
         if (r, c) in visited or matrix[r][c] == "W":
-            return
+            return 0
         visited.add((r, c))
+
+        total = 1
+
         # move down
-        dfs(r + 1, c)
+        total += dfs(r + 1, c)
         # move up
-        dfs(r - 1, c)
+        total += dfs(r - 1, c)
         # move right
-        dfs(r, c + 1)
+        total += dfs(r, c + 1)
         # move left
-        dfs(r, c - 1)
+        total += dfs(r, c - 1)
+
+        return total
 
     totalIslands = 0
     for r in range(len(matrix)):
         for c in range(len(matrix[0])):
             if (r, c) in visited or matrix[r][c] == "W":
                 continue
-            dfs(r, c)
+            print(dfs(r, c))
             totalIslands += 1
 
-    print(totalIslands)
     return totalIslands
 
 
 islandCount(m)
-
-[
-    ["1", "0", "1", "1", "1"],
-    ["1", "0", "1", "0", "1"],
-    ["1", "1", "1", "0", "1"],
-]
