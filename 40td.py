@@ -1,6 +1,8 @@
-class Solution:
+from dsa import *
 
-    def combinationSum2(self,candidates: List[int], target: int) -> List[List[int]]:
+
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         candidates.sort()
         subsets = []
 
@@ -13,12 +15,13 @@ class Solution:
                 # Skip duplicates
                 if i > start and candidates[i] == candidates[i - 1]:
                     continue
-                
+
                 if candidates[i] > target_left:
                     break
-                
-                backtrack(i + 1, target_left - candidates[i], current_subset + [candidates[i]])
+
+                backtrack(
+                    i + 1, target_left - candidates[i], current_subset + [candidates[i]]
+                )
 
         backtrack(0, target, [])
         return subsets
-
