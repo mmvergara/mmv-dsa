@@ -1,6 +1,8 @@
 import heapq
 from collections import deque
+
 # AGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
 
 def inBounds(r, c, rb, cb):
     return (0 <= r and r < rb) and (0 <= c and c < cb)
