@@ -1,16 +1,9 @@
-class Solution:
-    def uniqueOccurrences(self, arr: List[int]) -> bool:
+from dsa import *
+import collections
 
-        mp = {}
-        for n in arr:   
-            if n in mp:
-                mp[n]+=1
-            else:
-                mp[n]=1
+def uniqueOccurrences(self, arr: List[int]) -> bool:
+    c = collections.Counter(arr).values()
+    return len(c) == len(set(c))
 
 
-        for k,v in mp.items()
-            if k != v:
-                return False
-        return True
-
+uniqueOccurrences("", [1, 2, 2, 1, 1, 3])
