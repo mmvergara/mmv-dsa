@@ -1,20 +1,30 @@
-import sys
-
-def maxProfit(self, prices: list[int]) -> int:
-    minimum = sys.maxsize
-    maxProfit = 0
-    for i in range(len(prices)):
-        # keep tract of the min price
-        if prices[i] < minimum:
-            minimum = prices[i]
-            # we continue because we just got a new min buy
-            continue
-        # calc the profit
-        profit = prices[i] - minimum
-        # update the profit if we found a better profit
-        maxProfit = max(profit, maxProfit)
-    return maxProfit
+from dsa import *
 
 
-res = maxProfit("", [7, 1, 5, 3, 6, 4])
-print(res)
+def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+    # create a map of letters and their starting positions:
+
+    startingPoints = {}
+    for r in range(len(board)):
+        for c in range(len(board[0])):
+            if board[r][c] in startingPoints:
+                startingPoints[board[r][c]].append((r, c))
+            else:
+                startingPoints[board[r][c]] = [(r, c)]
+
+    valid = []
+
+
+    pass
+
+
+findWords(
+    "",
+    board=[
+        ["o", "a", "a", "n"],
+        ["e", "t", "a", "e"],
+        ["i", "h", "k", "r"],
+        ["i", "f", "l", "v"],
+    ],
+    words=["oath", "pea", "eat", "rain"],
+)
