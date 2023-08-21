@@ -1,0 +1,71 @@
+import time
+
+start_time = time.time()
+
+
+def solveNQueens(self, n: int):
+    ans = []
+    grid = [["." for _ in range(n)] for _ in range(n)]
+
+    def tryPlaceQueen(grid, r, c):
+        n = len(grid)
+        if grid[r][c] == "Q":
+            return False
+
+        # check in queen directions
+        def dfs(
+            r,
+            c,
+            dr,
+            dc,
+        ):
+            while 0 <= r < n and 0 <= c < n:
+                if grid[r][c] == "Q":
+                    return False
+                r += dr
+                c += dc
+            return True
+
+        dirs = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+
+        for x, y in dirs:
+            if not dfs(r, c, x, y):
+                return False
+        return True
+
+    tries = 0
+
+    def rec(r, c, placed=0):
+        nonlocal tries
+        tries += 1
+        print(f"TRIENG {tries}")
+        if c >= n:
+            c = 0
+            r += 1
+
+        if r >= n:
+            if placed == n:
+                ans.append(["".join(row) for row in grid])
+            return
+
+        # dont place q
+        rec(r, c + 1, placed)
+
+        # place if possible q
+        if tryPlaceQueen(grid, r, c):
+            grid[r][c] = "Q"
+            rec(r + 1, 0, placed + 1)
+            grid[r][c] = "."
+
+    rec(0, 0)
+    print(ans)
+    return ans
+
+
+solveNQueens("", 9)
+
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+
+print(f"Elapsed time: {elapsed_time} seconds")
