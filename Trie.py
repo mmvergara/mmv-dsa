@@ -11,6 +11,12 @@ class Trie:
             node = node.childrens[ch]
         node.is_end = True
 
+    def delete(self, s):
+        def rec(node: Trie, s, i):
+ 
+        rec(self, s, 0)
+        pass
+
     def query(self, st):
         node = self
         s = ""
