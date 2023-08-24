@@ -1,5 +1,4 @@
 from dsa import *
-
 def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
     
     def rec(l,r):
