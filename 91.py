@@ -4,7 +4,7 @@ def numDecodings(self, s: str) -> int:
     combs = []
 
     def rec(combs, s, curS, i):
-        if i >= len(s):
+         if i >= len(s):
             combs.append(curS[:])
             return
 
