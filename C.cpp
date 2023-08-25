@@ -1,9 +1,9 @@
 #include <iostream>
-#include <cstdio>
+#include 
 using namespace std;
 
 int main() {
-	float i = 1952%10;
+	float i = floor1952%10;
 	cout << i;
 	return 0 ;
 }
