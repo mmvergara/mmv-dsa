@@ -1,1 +1,0 @@
-print(len("This code defines a class Solution with a method countConsistentStrings that takes a string allowed_chars and a list of strings words. It aims to count the number of consistent strings in the list, where a consistent string is defined as a string in which all characters are present in the allowed_chars string."))
