@@ -1,0 +1,5 @@
+print(64 // 2)
+print(32 // 2)
+print(16 // 2)
+print(8 // 2)
+print(4 // 2)
