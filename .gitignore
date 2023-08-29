@@ -1,3 +1,4 @@
 *.exe
 *.swp
 tempCodeRunnerFile.py
+__pycache__

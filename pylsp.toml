@@ -1,4 +1,0 @@
-[plugins]
-jedi = { enable = true }
-flake8 = { enable = true }
-black = { enable = true }
