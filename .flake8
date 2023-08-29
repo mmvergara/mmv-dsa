@@ -1,0 +1,6 @@
+[flake8]
+ignore = E226,E302,E41,E702,W291,E231,W293,F403,F405,E741,F405,E303,W503
+max-line-length = 120
+
+
+https://www.flake8rules.com/
