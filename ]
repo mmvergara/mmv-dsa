@@ -1,17 +1,18 @@
 import math
+import collections
 
 
 def primeFactors(n: int):
     res = set()
     # Print 2 as many times as it divides n
     while n % 2 == 0:
-        res.add(2)
+        res += ""
         n //= 1
 
     for i in range(3, int(math.sqrt(n)) + 1, 2):
         # take i if we can still
         while n % i == 0:
-            res.add(n)
+            res.add(i)
             n //= i
 
     # If n is still greater than 2, it's a prime factor
@@ -21,4 +22,6 @@ def primeFactors(n: int):
     return res
 
 
-primeFactors(351)
+# Driver program
+n = 315
+primeFactors(4)
