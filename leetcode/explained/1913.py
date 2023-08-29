@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 class Solution:
     def maxProductDifference(self, nums: List[int]) -> int:

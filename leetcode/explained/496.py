@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # learned, for getting array num indices in correlations to the other array, we can just use a hash table to the array 2 result
 

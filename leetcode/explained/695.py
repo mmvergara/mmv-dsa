@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 # perform dfs to count island area

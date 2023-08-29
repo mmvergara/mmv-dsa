@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def largestLocal(self, grid: List[List[int]]) -> List[List[int]]:

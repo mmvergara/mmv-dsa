@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 class Solution:
     def buildArray(self, nums: List[int]) -> List[int]:
         ans = [None for _ in range(len(nums))]

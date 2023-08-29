@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
     before_left = None

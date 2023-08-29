@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def combine(self, n: int, k: int) -> List[List[int]]:

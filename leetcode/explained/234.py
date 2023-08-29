@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 class ListNode:
     def __init__(self, val=0, next=None):

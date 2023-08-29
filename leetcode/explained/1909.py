@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 # Learned, make use of indices and the logic behind a certain concept and obvious facts in this case it is sorted

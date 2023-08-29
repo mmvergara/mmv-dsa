@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 def swapNodes(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
 
     left = head

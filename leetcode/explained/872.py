@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:

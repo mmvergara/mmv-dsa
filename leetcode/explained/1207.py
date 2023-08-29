@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 import collections
 
 def uniqueOccurrences(self, arr: List[int]) -> bool:

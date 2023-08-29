@@ -1,5 +1,5 @@
 import sys
-from dsa import *
+from randoms.dsa import *
 
 def findMin(self, nums: List[int]) -> int:
     # initialize pointers

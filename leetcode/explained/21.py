@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
     head = ListNode()

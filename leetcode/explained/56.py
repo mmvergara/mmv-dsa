@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def merge(self, intervals: List[List[int]]) -> List[List[int]]:

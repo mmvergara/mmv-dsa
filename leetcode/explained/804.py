@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def uniqueMorseRepresentations(self, words: List[str]) -> int:

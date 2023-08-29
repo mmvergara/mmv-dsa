@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def countKDifference(self, nums: List[int], k: int) -> int:

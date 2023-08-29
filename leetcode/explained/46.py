@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 def permute(self, nums: List[int]) -> List[List[int]]:
     perms = []

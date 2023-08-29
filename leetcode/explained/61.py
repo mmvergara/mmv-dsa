@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 node1 = ListNode(1)
 node2 = ListNode(2)

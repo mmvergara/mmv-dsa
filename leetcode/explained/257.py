@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
 

@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 # in order left , visit, right
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:

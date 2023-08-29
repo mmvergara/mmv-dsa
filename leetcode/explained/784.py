@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def letterCasePermutation(self, s: str) -> List[str]:

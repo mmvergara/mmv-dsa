@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def maximumNumberOfStringPairs(self, words: List[str]) -> int:

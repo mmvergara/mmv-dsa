@@ -1,5 +1,5 @@
 from collections import deque
-from dsa import *
+from randoms.dsa import *
 
 
 class Solution:

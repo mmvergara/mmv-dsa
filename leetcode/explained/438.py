@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 def findAnagrams(self, s: str, p: str) -> List[int]:
     # sliding window approach - compare frequency map in each window slide

@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def findJudge(n: int, trust: List[List[int]]) -> int:

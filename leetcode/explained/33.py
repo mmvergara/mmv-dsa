@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def search(self, nums: List[int], target: int) -> int:

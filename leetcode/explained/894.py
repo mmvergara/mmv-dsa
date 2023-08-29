@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def allPossibleFBT(self, n: int) -> List[Optional[TreeNode]]:

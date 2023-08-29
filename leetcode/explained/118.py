@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # learned: for list that we know that are going to be filled with n values, we can optimize more by initializing an array with ex.[None for _ in range(i + 1)]
 

@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def alternatingSubarray(self, nums: List[int]) -> int:

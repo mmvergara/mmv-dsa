@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 # learned, with fixed n combinations of an array, we can just use a for loop

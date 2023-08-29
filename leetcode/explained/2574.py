@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
     def leftRightDifference(self, nums: List[int]) -> List[int]:
     N = len(nums)

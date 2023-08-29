@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 class Solution:
     def maximizeSum(self, nums: List[int], k: int) -> int:
         cur = max(nums)

@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 def finalValueAfterOperations(self, operations: List[str]) -> int:
 
     val = 0

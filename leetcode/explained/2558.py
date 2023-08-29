@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 from math import floor, sqrt
 from heapq import heapify
 

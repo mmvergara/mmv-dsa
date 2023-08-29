@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 # use dfs to count island

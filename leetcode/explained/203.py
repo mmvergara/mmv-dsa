@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # Keep tract of the node before the node to be removed and then move the pointer to the nodeToBeremoved.next
 class Solution:

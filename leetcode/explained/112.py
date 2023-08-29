@@ -1,4 +1,4 @@
-from dsa import  *
+from randoms.dsa import  *
 
 def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
     # if there is no root, then it's impossible to find the targetSum

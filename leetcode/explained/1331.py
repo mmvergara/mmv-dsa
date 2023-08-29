@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # we can deal with dup values with hashmaps
 def arrayRankTransform(self, arr: List[int]) -> List[int]:

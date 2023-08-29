@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
     # keep tract of the max depth

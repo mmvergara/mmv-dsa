@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 # def letterCombinations(self, digits: str) -> List[str]:
@@ -28,7 +28,7 @@ from dsa import *
 #         res = newRes
 
 #     print(res)
-from dsa import *
+from randoms.dsa import *
 
 
 def letterCombinations(self, digits: str) -> List[str]:

@@ -1,5 +1,5 @@
 import math
-from dsa import *
+from randoms.dsa import *
 
 # C(n, k) = n! / (k! * (n - k)!), 
 def getRow(self, n: int) -> List[int]:

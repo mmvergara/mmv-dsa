@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 # We modify each node that we are traversing ( Modify in anyway ex. add a value or in my case changed the value to "done")

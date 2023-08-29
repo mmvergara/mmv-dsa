@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 
 def shuffle(self, nums: List[int], n: int) -> List[int]:

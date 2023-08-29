@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # get first val,
 # incremenet count if the res == n and decrement if not.. and after it if the count == 0  then the new counter starts at 1 and res = n

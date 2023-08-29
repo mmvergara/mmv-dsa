@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # 1234 ll
 ll = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))

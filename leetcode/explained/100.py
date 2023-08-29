@@ -1,5 +1,5 @@
 # Definition for a binary tree node.
-from dsa import *
+from randoms.dsa import *
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

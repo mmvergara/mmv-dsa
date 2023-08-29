@@ -1,4 +1,4 @@
-from dsa import *
+from randoms.dsa import *
 
 # LEARNED: when dealing threshold you can use variables to keep tract of it.
 
