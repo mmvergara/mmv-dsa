@@ -4,6 +4,8 @@ import heapq
 
 def maxEvents(self, events: List[List[int]]) -> int:
     events = sorted(events, key=lambda x: [x[1], x[0]])
+    x = 0
+
     print(events)
     # process data 0(N)
     xEvents = set()
