@@ -21,6 +21,5 @@ def minEatingSpeed(self, piles: list[int], h: int) -> int:
 
     return res 
 
-
 res = minEatingSpeed("",[30,11,23,4,20],5)
 print(res)

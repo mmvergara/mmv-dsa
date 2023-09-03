@@ -1,9 +1,10 @@
 #include <iostream>
-#include 
+#include <cmath>
+
 using namespace std;
 
 int main() {
-	float i = floor1952%10;
+	int i = floor(10%1);
 	cout << i;
 	return 0 ;
 }
