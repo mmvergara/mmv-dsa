@@ -5,18 +5,16 @@
 #include <string>
 
 using namespace std;
-
-void render(vector<vector<char>>& board){
-	string out = "\n";
-	for (int r = 0 ; r < board.size(); r++){
-		for (int c = 0 ; c < board.size(); c++)
-			out += board[r][c] + " ";
-		row += "\n";
-
-	}
-	cout << out;
+void render(const vector<vector<char>>& board) {
+    for (int r = 0; r < board.size(); r++) {
+        string rowString;
+        for (int c = 0; c < board[r].size(); c++) {
+            rowString += board[r][c];
+            rowString += " ";
+        }
+        cout << rowString << endl;
+    }
 }
-
 vector<vector<char>> evaluateBoard(vector<vector<char>>& board){
 
 	vector<vector<int>> neighbors = {
@@ -91,7 +89,7 @@ int main() {
 	system("cls");
 	render(board);
 	board = evaluateBoard(board);
-	sleep(0.3);
+	sleep(0.5);
 	}
 	return 0;
 }
