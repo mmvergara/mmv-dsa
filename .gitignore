@@ -2,3 +2,5 @@
 *.swp
 tempCodeRunnerFile.py
 __pycache__
+.vim
+.vscode
