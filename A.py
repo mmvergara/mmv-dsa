@@ -1,3 +1,1 @@
-
-num = 2932
-print(str(num).split(""))
+print("Hello World")
