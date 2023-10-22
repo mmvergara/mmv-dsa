@@ -5,16 +5,9 @@
 using namespace std;
 
 int main() {
-	int num = 2932;
-	int ans = INT_MAX;
-	for ( int m = 1 ; m < num; m*=10){
-		int a = num % m;
-		int b = num / m;
-		cout << a << "-" << b << endl;
-		int sum =  ( num % m ) + (num / m );
-		cout << sum << endl;
-		ans = min(ans,sum);
+	int  x= 0;
+	for ( int i = 0 ; i < 10000;i++){
+		x++;
 	}
-	cout << ans;
-	return 0;
+	cout << x;
 }
