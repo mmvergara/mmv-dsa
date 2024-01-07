@@ -1,19 +1,18 @@
-def lengthOfLongestSubstring(self, s: str) -> int:
-    n = len(s)
-    if n == 0:
-        return 0
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        if len(s) == 0:
+            return 0
+        if len(s) == 1:
+            return 1
 
-    maxL = 0
-    mp = {}
-    l = 0
+        l = 0
+        res = 0
+        mp = {}
+        for r in range(len(s)):
+            if s[r] in mp and mp[s[r]] >= l:
+                l = mp[s[r]] + 1
 
-    for right in range(n):
-        if s[right] in mp and mp[s[right]] >= l:
-            l = mp[s[right]] + 1
-        mp[s[right]] = right
-        maxL = max(maxL, right - l + 1)
-    print(maxL)
-    return maxL
+            mp[s[r]] = r
+            res = max(res, r - l + 1)
 
-
-lengthOfLongestSubstring("", "abba")
+        return res

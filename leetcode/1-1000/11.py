@@ -1,25 +1,39 @@
-
-def maxArea(self, height: list[int]) -> int:
-    # start from outwards with left and right pointer
-    left = 0
-    right = len(height)-1
-    maxA = 0
-
-    # move the the pointer with the lowest value inwards until you can't move them anymore
-    # while checking if there is a new MaxArea
-    while left < right:
-        minH = min(height[left],height[right])
-        width = right - left
-        
-        maxA = max(minH*width,maxA)
-        if height[left] < height[right]:
-            left+=1
-        else:
-            right-=1
-
-    return maxA
+from typing import List
 
 
-print(maxArea("",[1,8,6,2,5,4,8,3,7]))
+class Solution:
+    def maxArea(self, arr: List[int]) -> int:
+        l = 0
+        r = len(arr) - 1
+        res = 0
+
+        while l < r:
+            # get the container area then apply to res
+
+            res = max(min(arr[l], arr[r]) * (r - l), res)
+
+            if arr[l] > arr[r]:
+                r -= 1
+            else:
+                l -= 1
+
+        return res
 
 
+class Solution:
+    def maxArea(self, arr: List[int]) -> int:
+        l = 0
+        r = len(arr) - 1
+        res = 0
+
+        while l < r:
+            # get the container area then apply to res
+
+            res = max(min(arr[l], arr[r]) * (r - l), res)
+
+            if arr[l] > arr[r]:
+                r -= 1
+            else:
+                l += 1
+
+        return res
